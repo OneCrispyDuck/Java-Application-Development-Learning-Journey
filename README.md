@@ -263,4 +263,4 @@ java-learning-journey/
 - Portfolio: [Your Portfolio Website]
 
 ## 📝 License
-This project is created as part of the Software Engineering course (COMP-S312F) at Hong Kong Metropolitan University. All rights and usage are governed by the university's academic policies.
+This project is created as part of the Java Application Development course (COMP-S312F) at Hong Kong Metropolitan University. All rights and usage are governed by the university's academic policies.
