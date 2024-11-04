@@ -14,35 +14,19 @@ This repository documents my journey learning Java Development, focusing on core
 java-learning-journey/
 ├── 01-oop-fundamentals/
 │   ├── docs/
-│   │   ├── data-abstraction.md
-│   │   ├── encapsulation.md
-│   │   ├── inheritance.md
-│   │   ├── polymorphism.md
+│   │   ├── classes-and-objects.md
+│   │   ├── methods-and-constructors.md
+│   │   ├── access-modifiers.md
 │   │   └── README.md
 │   ├── exercises/
 │   │   ├── basic-class-creation/
 │   │   │   ├── src/
 │   │   │   │   └── com/
-│   │   │   │       └── examples/
-│   │   │   │           ├── Car.java
+│   │   │   │       └── oop/
+│   │   │   │           ├── Book.java
 │   │   │   │           └── Main.java
 │   │   │   └── README.md
-│   │   ├── inheritance-practice/
-│   │   │   ├── src/
-│   │   │   │   └── com/
-│   │   │   │       └── examples/
-│   │   │   │           ├── Animal.java
-│   │   │   │           ├── Dog.java
-│   │   │   │           └── Cat.java
-│   │   │   └── README.md
-│   │   └── polymorphism-examples/
-│   │       ├── src/
-│   │       │   └── com/
-│   │       │       └── examples/
-│   │       │           ├── Shape.java
-│   │       │           ├── Circle.java
-│   │       │           └── Rectangle.java
-│   │       └── README.md
+│   │   └── object-relationships/
 │   └── projects/
 │       ├── library-management/
 │       │   ├── src/
@@ -51,68 +35,98 @@ java-learning-journey/
 │       │   │           ├── models/
 │       │   │           ├── services/
 │       │   │           └── utils/
-│       │   ├── test/
 │       │   └── README.md
-│       └── banking-system/
-│           ├── src/
-│           │   └── com/
-│           │       └── banking/
-│           │           ├── models/
-│           │           ├── services/
-│           │           └── utils/
-│           ├── test/
-│           └── README.md
-├── 02-java-basics/
+│       └── student-registration/
+├── 02-design-patterns/
 │   ├── docs/
-│   │   ├── variables-and-types.md
-│   │   ├── control-flow.md
-│   │   ├── arrays-and-collections.md
-│   │   └── README.md
-│   ├── exercises/
-│   │   ├── basic-syntax/
-│   │   ├── control-structures/
-│   │   └── data-structures/
-│   └── projects/
-│       └── calculator-app/
-├── 03-design-patterns/
-│   ├── docs/
-│   │   ├── creational-patterns/
+│   │   ├── creational/
 │   │   │   ├── singleton.md
-│   │   │   ├── factory.md
-│   │   │   └── builder.md
-│   │   ├── structural-patterns/
-│   │   │   ├── adapter.md
-│   │   │   ├── decorator.md
-│   │   │   └── facade.md
-│   │   └── behavioral-patterns/
-│   │       ├── observer.md
-│   │       ├── strategy.md
-│   │       └── command.md
+│   │   │   └── factory.md
+│   │   ├── structural/
+│   │   └── behavioral/
 │   ├── exercises/
-│   │   ├── singleton-practice/
-│   │   ├── factory-practice/
-│   │   └── observer-practice/
+│   │   ├── singleton-pattern/
+│   │   ├── factory-pattern/
+│   │   └── observer-pattern/
 │   └── projects/
-│       └── design-patterns-demo/
-├── 04-advanced-java/
+│       ├── ecommerce-system/
+│       └── task-manager/
+├── 03-inheritance/
 │   ├── docs/
-│   │   ├── multithreading.md
-│   │   ├── networking.md
-│   │   └── gui-programming.md
+│   │   ├── inheritance-basics.md
+│   │   ├── method-overriding.md
+│   │   └── abstract-classes.md
 │   ├── exercises/
-│   │   ├── thread-basics/
-│   │   ├── socket-programming/
-│   │   └── swing-basics/
+│   │   ├── class-hierarchies/
+│   │   └── abstract-implementation/
 │   └── projects/
-│       └── chat-application/
+│       ├── vehicle-management/
+│       └── employee-hierarchy/
+├── 04-polymorphism-and-final/
+│   ├── docs/
+│   │   ├── method-overloading.md
+│   │   ├── method-overriding.md
+│   │   └── final-keyword.md
+│   ├── exercises/
+│   │   ├── overloading-practice/
+│   │   └── interface-implementation/
+│   └── projects/
+│       ├── shape-calculator/
+│       └── payment-processor/
+├── 05-exception-handling/
+│   ├── docs/
+│   │   ├── try-catch.md
+│   │   ├── custom-exceptions.md
+│   │   └── best-practices.md
+│   ├── exercises/
+│   │   ├── basic-exception/
+│   │   └── custom-exception/
+│   └── projects/
+│       ├── file-processor/
+│       └── banking-transactions/
+├── 06-multithreading/
+│   ├── docs/
+│   │   ├── thread-basics.md
+│   │   ├── synchronization.md
+│   │   └── thread-communication.md
+│   ├── exercises/
+│   │   ├── basic-threads/
+│   │   └── sync-practice/
+│   └── projects/
+│       ├── producer-consumer/
+│       └── parallel-processor/
+├── 07-networking/
+│   ├── docs/
+│   │   ├── socket-programming.md
+│   │   ├── url-handling.md
+│   │   └── protocols.md
+│   ├── exercises/
+│   │   ├── socket-basics/
+│   │   └── url-handling/
+│   └── projects/
+│       ├── chat-app/
+│       └── file-transfer/
+├── 08-database/
+│   ├── docs/
+│   │   ├── jdbc-basics.md
+│   │   ├── sql-fundamentals.md
+│   │   └── transactions.md
+│   ├── exercises/
+│   │   ├── jdbc-operations/
+│   │   └── transaction-practice/
+│   └── projects/
+│       ├── inventory-system/
+│       └── student-database/
 ├── resources/
 │   ├── learning-materials/
-│   │   ├── books/
-│   │   ├── videos/
-│   │   └── articles/
-│   └── templates/
-│       ├── project-readme-template.md
-│       └── exercise-readme-template.md
+│   │   ├── recommended-books.md
+│   │   └── useful-links.md
+│   ├── templates/
+│   │   ├── project-readme-template.md
+│   │   └── exercise-readme-template.md
+│   └── database-scripts/
+│       ├── schema.sql
+│       └── sample-data.sql
 ├── .gitignore
 ├── LICENSE
 └── README.md
