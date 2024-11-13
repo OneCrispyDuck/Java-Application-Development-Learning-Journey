@@ -131,6 +131,187 @@ java-learning-journey/
 ├── LICENSE
 └── README.md
 ```
+## Simplified structure of common directories
+```bash
+project-name/
+├── src/                    # Source code
+│   ├── main/              # Application code
+│   │   ├── java/         # Java source files
+│   │   └── resources/    # Configuration files, properties
+│   └── test/             # Test code
+├── target/                # Compiled files (generated)
+└── pom.xml                # Project configuration
+
+# Simplified example for beginners:
+my-first-project/
+├── src/
+│   ├── Main.java         # Your main program
+│   └── Calculator.java   # Your classes
+└── README.md             # Project documentation
+```
+
+## Learning project structures
+1. Maven and pom.xml
+```bash
+- Official Maven guide: https://maven.apache.org/guides/getting-started/
+- XML = eXtensible Markup Language
+- POM = Project Object Model
+- pom.xml is Maven's configuration file that manages:
+  - Project dependencies
+  - Build settings
+  - Project information
+  - Version control
+
+```
+2. Java project structure best practices
+```bash
+Standard directory layout: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
+```
+3. Understanding building tools
+Maven/Gradle explained:
+Build tools are like automated assistants that help you:
+```bash 
+1. Manage dependencies (external libraries your project needs)
+2. Compile your code
+3. Run tests
+4. Package your application
+5. Deploy your application
+
+"Simple analogy: Think of it like cooking
+
+Without build tool: You manually get all ingredients, prep them, follow steps
+With build tool: Like having a sous chef who gets ingredients, preps them, and follows a standard recipe (defined in pom.xml/build.gradle)"
+```
+
+## Directory evolutions / project organisation patterns
+As progressing in java projects, structures evolve to handle greater complexities.
+See the typical stages of evolution when it comes to project structures:
+
+1. Stage 1: Absolute Beginner
+```bash
+HelloWorld/
+├── HelloWorld.java
+└── README.md
+```
+
+2. Stage 2: Basic Project
+```bash
+Calculator/
+├── src/
+│   ├── Calculator.java
+│   └── Main.java
+├── README.md
+└── compiled/              # Where .class files go
+```
+
+3. Stage 3: Multiple Classes
+```bash
+BankingApp/
+├── src/
+│   ├── Account.java
+│   ├── Customer.java
+│   ├── Transaction.java
+│   └── Main.java
+├── lib/                   # External libraries (manually managed)
+├── compiled/
+└── README.md
+```
+
+4. Stage 4: First Maven Project
+```bash
+BankingApp/
+├── src/
+│   └── main/
+│       └── java/
+│           └── com/
+│               └── mybank/
+│                   ├── model/
+│                   │   ├── Account.java
+│                   │   ├── Customer.java
+│                   │   └── Transaction.java
+│                   └── Main.java
+├── pom.xml               # Maven configuration
+└── README.md
+```
+
+5. Professional Project
+```bash
+BankingApp/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── mybank/
+│   │   │           ├── model/
+│   │   │           ├── service/
+│   │   │           ├── repository/
+│   │   │           └── Main.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── mybank/
+│                   └── TestCases.java
+├── pom.xml
+├── .gitignore
+└── README.md
+```
+
+Here is another example of beginner-friendly template:
+```bash
+MyFirstProject/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── myproject/
+│   │               ├── Main.java
+│   │               └── Calculator.java
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── myproject/
+│                   └── CalculatorTest.java
+├── pom.xml
+└── README.md
+
+```
+
+Here is an example of pom.xml (Basic template):
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.myproject</groupId>
+    <artifactId>my-first-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Add dependencies here as needed -->
+    </dependencies>
+</project>
+```
+Key Maven Commands:
+```bash
+mvn compile        # Compiles the code
+mvn test          # Runs tests
+mvn package       # Creates a JAR file
+mvn clean         # Cleans previous builds
+```
+
+Foot note:
+- Project organisational patterns was self taught, for my own personal developent and understanding structures outside the learning scope
+of the university.
+
 
 ```markdown
 ## 🗂️ Content Overview
@@ -258,8 +439,8 @@ java-learning-journey/
 - [Programming challenges completed]
 
 ## 📫 Contact & Social
-- LinkedIn: [Your LinkedIn Profile]
-- Email: [Your Professional Email]
+- LinkedIn: gutierrez-joseph-james
+- Email: upon request ~
 - Portfolio: [Your Portfolio Website]
 
 ## 📝 License
