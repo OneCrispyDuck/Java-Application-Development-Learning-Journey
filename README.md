@@ -117,6 +117,69 @@ java-learning-journey/
 │   └── projects/
 │       ├── inventory-system/
 │       └── student-database/
+├── 09-jsp/
+│   ├── docs/
+│   │   ├── README.md
+│   │   ├── jsp-basics.md
+│   │   ├── jsp-directives.md
+│   │   └── jsp-actions.md
+│   ├── exercises/
+│   │   ├── basic-jsp/
+│   │   │   ├── webapp/
+│   │   │   │   └── WEB-INF/
+│   │   │   └── README.md
+│   │   └── jsp-database/
+│   │       ├── webapp/
+│   │       │   └── WEB-INF/
+│   │       └── README.md
+│   └── projects/
+│       └── jsp-web-app/
+│           ├── webapp/
+│           │   └── WEB-INF/
+│           └── README.md
+├── 10-java-beans/
+│   ├── docs/
+│   │   ├── README.md
+│   │   ├── beans-fundamentals.md
+│   │   └── beans-properties.md
+│   ├── exercises/
+│   │   ├── basic-beans/
+│   │   │   ├── src/
+│   │   │   │   └── com/
+│   │   │   │       └── beans/
+│   │   │   └── README.md
+│   │   └── beans-jsp/
+│   │       ├── webapp/
+│   │       │   └── WEB-INF/
+│   │       └── README.md
+│   └── projects/
+│       └── bean-management/
+│           ├── src/
+│           ├── webapp/
+│           └── README.md
+├── 11-security/
+│   ├── docs/
+│   │   ├── README.md
+│   │   ├── cryptography-basics.md
+│   │   ├── symmetric-encryption.md
+│   │   ├── asymmetric-encryption.md
+│   │   └── message-security.md
+│   ├── exercises/
+│   │   ├── symmetric-encryption/
+│   │   │   ├── src/
+│   │   │   │   └── com/
+│   │   │   │       └── security/
+│   │   │   └── README.md
+│   │   └── asymmetric-encryption/
+│   │       ├── src/
+│   │       │   └── com/
+│   │       │       └── security/
+│   │       └── README.md
+│   └── projects/
+│       └── secure-messaging/
+│           ├── src/
+│           ├── webapp/
+│           └── README.md
 ├── resources/
 │   ├── learning-materials/
 │   │   ├── recommended-books.md

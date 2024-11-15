@@ -27,7 +27,6 @@ library-management/
 ### Models
 
 #### Book Class
-- Attributes:
   - isbn (String)
   - title (String)
   - author (String)
