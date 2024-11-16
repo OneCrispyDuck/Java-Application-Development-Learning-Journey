@@ -186,3 +186,203 @@ Object-oriented programming revolves around four main concepts: abstraction, enc
 - 📚 **Interface vs. Implementation**: By focusing on interfaces, programmers can utilize classes without needing to understand their complexities, fostering collaboration and allowing for easier modifications.   
 
 - ⚖️ **Data Integrity through Properties**: Assigning values to properties at instantiation ensures each object maintains its unique state, providing a mechanism for enforcing rules and validation, which is vital for maintaining data integrity.   
+
+
+## Extended learning notes (Self notes)
+### Method types
+Here are all the main types of methods in Java:
+
+1. **Predefined Methods (Built-in)**
+```java
+public class PredefinedExample {
+    public static void main(String[] args) {
+        // Math methods
+        Math.sqrt(25);
+        Math.random();
+        
+        // String methods
+        "hello".length();
+        "hello".toUpperCase();
+        
+        // System methods
+        System.out.println();
+        System.currentTimeMillis();
+    }
+}
+```
+
+2. **User-defined Methods**
+```java
+public class UserDefinedTypes {
+    // Instance Method
+    public void instanceMethod() {
+        // Requires object creation to call
+    }
+
+    // Static Method
+    public static void staticMethod() {
+        // Can be called without object creation
+    }
+
+    // Abstract Method (in abstract class)
+    abstract void abstractMethod();
+
+    // Final Method (cannot be overridden)
+    final void finalMethod() {
+    }
+
+    // Synchronized Method (thread-safe)
+    synchronized void synchronizedMethod() {
+    }
+
+    // Native Method (implemented in another language)
+    native void nativeMethod();
+}
+```
+
+3. **Method Types Based on Parameters**
+```java
+public class ParameterTypes {
+    // No-Parameter Method
+    void noParams() {
+    }
+
+    // Parameterized Method
+    void withParams(int x, String y) {
+    }
+
+    // Variable Arguments Method
+    void varArgs(String... strings) {
+    }
+}
+```
+
+4. **Method Types Based on Return**
+```java
+public class ReturnTypes {
+    // Void Method (no return)
+    void voidMethod() {
+    }
+
+    // Return Method
+    int returnMethod() {
+        return 42;
+    }
+
+    // Generic Return Method
+    <T> T genericMethod(T item) {
+        return item;
+    }
+}
+```
+
+5. **Access Modifier Methods**
+```java
+public class AccessTypes {
+    // Public Method
+    public void publicMethod() {
+    }
+
+    // Private Method
+    private void privateMethod() {
+    }
+
+    // Protected Method
+    protected void protectedMethod() {
+    }
+
+    // Default/Package-Private Method
+    void defaultMethod() {
+    }
+}
+```
+
+6. **Factory Methods**
+```java
+public class FactoryExample {
+    // Factory Method
+    public static FactoryExample createInstance() {
+        return new FactoryExample();
+    }
+}
+```
+
+7. **Accessor and Mutator Methods**
+```java
+public class AccessorMutator {
+    private String value;
+
+    // Getter (Accessor)
+    public String getValue() {
+        return value;
+    }
+
+    // Setter (Mutator)
+    public void setValue(String value) {
+        this.value = value;
+    }
+}
+```
+
+8. **Overridden Methods**
+```java
+public class OverrideExample {
+    // Overridden methods from Object class
+    @Override
+    public String toString() {
+        return "Custom toString";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+}
+```
+
+9. **Interface Methods**
+```java
+interface InterfaceTypes {
+    // Abstract Method (pre-Java 8)
+    void abstractMethod();
+
+    // Default Method (Java 8+)
+    default void defaultMethod() {
+    }
+
+    // Static Method (Java 8+)
+    static void staticMethod() {
+    }
+
+    // Private Method (Java 9+)
+    private void privateMethod() {
+    }
+}
+```
+
+10. **Recursive Methods**
+```java
+public class RecursiveExample {
+    // Recursive Method
+    public int factorial(int n) {
+        if (n <= 1) return 1;
+        return n * factorial(n - 1);
+    }
+}
+```
+
+These different types of methods serve various purposes:
+- Code organization
+- Functionality encapsulation
+- Access control
+- Thread safety
+- Performance optimization
+- Object-oriented design patterns
+- API design
+- Code reusability
+

@@ -42,6 +42,11 @@ public class Student {
 public class Book {
     // Default constructor
     public Book() {
+        this.title = "Unknown";
+        this.author = "Unknown";
+        this.isbn = "0000000000";
+        this.price = 0.0;
+        this.numberOfPages = 0;
     }
 }
 ```
@@ -50,8 +55,12 @@ public class Book {
 public class Book {
     private String title;
     
-    public Book(String title) {
+    public Book(String title, String author, String isbn, double price, int numberOfPages) {
         this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.price = price;
+        this.numberOfPages = numberOfPages;
     }
 }
 ```

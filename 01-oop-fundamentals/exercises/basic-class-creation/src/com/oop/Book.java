@@ -25,6 +25,53 @@ public class Book {
         this.numberOfPages = numberOfPages;
     }
 
-    // Methods
-    public void 
+    // Methods: Getter, Setter, Operational, Utility
+    
+    // Method: Getter/Setter pairs (Title)
+    public String getTitle(){
+        return title;
+    }
+
+    public void setTitle(String Title){
+        this.title = title;
+    }
+
+    //Method: Getter/Setter pairs (Author)
+    public String getAuthor(){
+        return author;
+    }
+
+    public void setAuthor(String author){
+        this.author = author;
+    }
+
+    //Method: Getter/Setter pairs (isbn)
+    public String getISBN(){
+        return isbn;
+    }
+
+    public void setISBN(String isbn){
+        this.isbn = isbn;
+    }
+
+    //Method: Getter/Setter pairs (price)
+    public double getPrice(){
+        return price;
+    }
+
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    //Method: Getter/Setter pairs (numberOfPages) 
+    public int numberOfPages(){
+        return numberOfPages;
+    }
+
+    public void setNumberOfPages(int numberOfPages){
+        this.numberOfPages = numberOfPages;
+    }
+
+    //Method: Operational Methods (Buiness Logic)
+    
 }
