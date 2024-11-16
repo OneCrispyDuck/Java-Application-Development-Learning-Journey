@@ -188,7 +188,7 @@ Object-oriented programming revolves around four main concepts: abstraction, enc
 - ⚖️ **Data Integrity through Properties**: Assigning values to properties at instantiation ensures each object maintains its unique state, providing a mechanism for enforcing rules and validation, which is vital for maintaining data integrity.   
 
 
-## Extended learning notes (Self notes)
+## Extended learning notes (Self notes - maybe unrealated to main topic OOP)
 ### Method types
 Here are all the main types of methods in Java:
 

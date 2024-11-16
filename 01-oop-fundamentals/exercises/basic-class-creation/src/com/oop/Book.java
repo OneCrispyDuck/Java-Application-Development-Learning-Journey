@@ -1,3 +1,5 @@
+package com.oop;
+
 public class Book {
     // Fields (attributes)
     private String title;
@@ -32,7 +34,7 @@ public class Book {
         return title;
     }
 
-    public void setTitle(String Title){
+    public void setTitle(String title){
         this.title = title;
     }
 
@@ -64,7 +66,7 @@ public class Book {
     }
 
     //Method: Getter/Setter pairs (numberOfPages) 
-    public int numberOfPages(){
+    public int getNumberOfPages(){
         return numberOfPages;
     }
 
@@ -72,6 +74,36 @@ public class Book {
         this.numberOfPages = numberOfPages;
     }
 
-    //Method: Operational Methods (Buiness Logic)
-    
+    //Method: toString() (Override Method) [Why override?: Converts object to readable string format for printing/display]
+    @Override
+    public String toString() {
+        return "Title: " + title + 
+               "\nAuthor: " + author + 
+               "\nISBN: " + isbn + 
+               "\nPrice: $" + price + 
+               "\nPages: " + numberOfPages;
+    }
+
+    //Method: equals method (Boolean: For object comparrison)
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) // Check if comparing the same object with itself 
+        return true; // If same memory location, they're identical
+        if (obj == null || getClass() != obj.getClass()) // Check if the passed object is null OR if it's not a Book class
+        return false; // If either condition is true, they can't be equal
+        Book book = (Book) obj; // Cast the object to Book type since we now know it's a book
+        return isbn.equals(book.isbn); // Comparing books based on ISBN (Assumes ISBN is the unique identifier)
+    }
+
+    // Display info method
+    public void displayInfo(){
+        System.out.println("Book Detials");
+        System.out.println("Title "+ title);
+        System.out.println("Author "+author);
+        System.out.println("ISBN "+isbn);
+        System.out.println("Price: $"+price);
+        System.out.println("Number of pages: "+ numberOfPages);
+
+    }
+
 }

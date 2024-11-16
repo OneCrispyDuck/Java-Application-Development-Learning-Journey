@@ -165,8 +165,8 @@ public void displayInfo() {
     }
 ```
 
-## Extended learning notes (Self notes - maybe unrealated to main topic OOP)
-### Method types
+## Extended learning notes
+### General Method types outside the scope of this lecture
 Here are all the main types of methods in Java:
 
 1. **Predefined Methods (Built-in)**
