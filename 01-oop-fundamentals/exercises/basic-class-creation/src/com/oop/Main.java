@@ -14,6 +14,9 @@ public class Main {
         Book book3 = new Book("1984", "George Orwell", "978-0451524935", 9.99, 328);
         // Creating a duplicate book for equality testing
         Book book4 = new Book("1984", "George Orwell", "978-0451524935", 9.99, 328);
+        // Creating a book according to expected outcome
+        @SuppressWarnings("unused")
+        Book book5 = new Book("Java Programming all in one", "Doug Lowe", "971-6358492200", 13, 555 );
 
         // SECTION 2: Using both constructors
         System.out.println("\n--- Demonstrating Different Constructors ---");

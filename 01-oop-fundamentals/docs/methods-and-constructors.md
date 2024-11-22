@@ -110,6 +110,58 @@ public class Product {
     }
 }
 ```
+Another example:
+Let me clarify the different types of constructors with examples:
+
+```java
+public class BankAccount {
+    private double balance;
+    private String accountHolder;
+
+    // Default constructor (automatically provided if no constructor is defined)
+    // Java creates: public BankAccount() { }
+
+    // No-argument constructor (explicitly written)
+    public BankAccount() {
+        balance = 0.0;
+        accountHolder = "";
+    }
+
+    // Explicit value constructor (parameterized constructor)
+    public BankAccount(double initialBalance, String holder) {
+        balance = initialBalance;
+        accountHolder = holder;
+    }
+}
+```
+
+Key Points:
+1. **Default Constructor**
+   - Created by Java if no constructor is defined
+   - Invisible in code
+   - Initializes fields to default values (0, null, false)
+
+2. **No-argument Constructor**
+   - Explicitly written by programmer
+   - Takes no parameters
+   - Can set specific initial values
+
+3. **Explicit Value Constructor**
+   - Takes parameters
+   - Allows object creation with specific values
+   - Also called parameterized constructor
+
+Usage Example:
+```java
+// Using default constructor (if no other constructors exist)
+BankAccount acc1 = new BankAccount();
+
+// Using no-argument constructor
+BankAccount acc2 = new BankAccount();
+
+// Using explicit value constructor
+BankAccount acc3 = new BankAccount(1000.0, "John Doe");
+```
 
 ### Constructor vs Method
 ```markdown

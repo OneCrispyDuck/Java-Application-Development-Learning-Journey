@@ -1,6 +1,3 @@
-Here's an appropriate README.md for this OOP Fundamentals section:
-
-
 # OOP Fundamentals
 
 ## Overview
@@ -188,201 +185,364 @@ Object-oriented programming revolves around four main concepts: abstraction, enc
 - ⚖️ **Data Integrity through Properties**: Assigning values to properties at instantiation ensures each object maintains its unique state, providing a mechanism for enforcing rules and validation, which is vital for maintaining data integrity.   
 
 
-## Extended learning notes (Self notes - maybe unrealated to main topic OOP)
-### Method types
-Here are all the main types of methods in Java:
+# HKMU JAVA APPLICATION DEVELOPMENT
+## LECTURE 01: OBJECT ORIENTED PROGRAMMING
 
-1. **Predefined Methods (Built-in)**
+### Core OOP Concepts
+1. Data Abstraction
+2. Encapsulation/Information Hiding
+3. Inheritance
+4. Polymorphism
+
+### Java Implementation Concepts
+1. Class Definition
+2. Access Modifiers (Public Interface)
+3. Constructors
+   - Default (No-arg)
+   - Parameterized
+4. Member Functions (Methods)
+5. Object Creation
+6. Member Access
+7. Special Keywords
+   - 'this' keyword
+8. Static Members
+   - Variables
+   - Methods
+   - Fields/Attributes
+
+### Class Structure Example: BankAccount
 ```java
-public class PredefinedExample {
+public class BankAccount {
+    // Fields (Data Members)
+    private double balance;
+    private String accountHolder;
+
+    // Default Constructor
+    public BankAccount() {
+        this.balance = 0;
+        this.accountHolder = "";
+    }
+
+    // Parameterized Constructor
+    public BankAccount(double openingBalance, String accountHolder) {
+        this.balance = openingBalance;
+        this.accountHolder = accountHolder;
+    }
+
+    // Member Functions (Methods)
+    public double withdraw(double amount) {
+        // Implementation
+    }
+    
+    public void deposit(double amount) {
+        // Implementation
+    }
+    
+    public double getBalance() {
+        // Implementation
+    }
+}
+```
+### Encapsulation/Information Hiding
+
+#### Access Modifiers
+Controls access to class members (variables and methods)
+
+1. `public`
+   - Accessible from anywhere
+   - Any class can access
+   - Least restrictive
+
+2. `protected`
+   - Accessible within:
+     - Same class
+     - Subclasses
+     - Same package
+
+3. `private`
+   - Accessible only within same class
+   - Most restrictive
+   - Best for encapsulation
+
+#### Visibility Table
+| Modifier   | Class | Package | Subclass | World |
+|------------|-------|---------|----------|-------|
+| public     | Yes   | Yes     | Yes      | Yes   |
+| protected  | Yes   | Yes     | Yes      | No    |
+| private    | Yes   | No      | No       | No    |
+| (default)  | Yes   | Yes     | No       | No    |
+
+#### Example
+```java
+public class BankAccount {
+    // Private fields (data hiding)
+    private double balance;
+    private String accountHolder;
+
+    // Public methods (interface)
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public boolean withdraw(double amount) {
+        if (amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+}
+```
+
+### Java Implementation Concepts
+1. Class Definition
+2. Access Modifiers (Public Interface)
+3. Constructors
+   - Default (No-arg)
+   - Parameterized
+4. Member Functions (Methods)
+5. Object Creation
+6. Member Access
+7. Special Keywords
+   - 'this' keyword
+8. Static Members
+   - Variables
+   - Methods
+   - Fields/Attributes
+
+#### Specific coverage: 1-6
+
+### Java Implementation Concepts
+
+1. Class Definition
+   - Blueprint for objects
+   - Syntax: `public class ClassName { }`
+   - Contains:
+     - Fields (attributes)
+     - Methods (behavior)
+     - Constructors
+   ```java
+   public class Car {
+       private String model;
+       private int year;
+   }
+   ```
+
+2. Access Modifiers
+   - public: accessible everywhere
+   - private: only within class
+   - protected: class, package, subclasses
+   - default: class and package only
+   ```java
+   public class Student {
+       private int id;          // only within class
+       public String name;      // accessible anywhere
+       protected int grade;     // class, package, subclasses
+       int section;            // default: package access
+   }
+   ```
+
+3. Constructors
+   ```java
+   public class Book {
+       private String title;
+       
+       // Default Constructor
+       public Book() {
+           title = "Untitled";
+       }
+       
+       // Parameterized Constructor
+       public Book(String bookTitle) {
+           title = bookTitle;
+       }
+   }
+   ```
+
+4. Member Functions (Methods)
+There are four member functions defined for the class "BankAccount"
+- getBalance()
+- getAccount()
+- setBalance()
+- setAccountHolder()
+
+4. Member Functions (Methods)
+
+Common Types of Methods:
+1. Accessor Methods (Getters)
+   - Return private data
+   - Usually start with "get"
+2. Mutator Methods (Setters)
+   - Modify private data
+   - Usually start with "set"
+
+Example using BankAccount class:
+```java
+public class BankAccount {
+    private double balance;
+    private String accountHolder;
+
+    // Accessor Methods (Getters)
+    public double getBalance() {
+        return balance;
+    }
+    
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    // Mutator Methods (Setters)
+    public void setBalance(double newBalance) {
+        this.balance = newBalance;
+    }
+    
+    public void setAccountHolder(String newHolder) {
+        this.accountHolder = newHolder;
+    }
+}
+```
+
+Other Method Examples:
+```java
+public class Calculator {
+    // Method with return and parameters
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    // Void method (no return value)
+    public void display(String message) {
+        System.out.println(message);
+    }
+}
+```
+
+Usage:
+```java
+BankAccount account = new BankAccount();
+account.setAccountHolder("John Doe");    // Setter
+String holder = account.getAccountHolder(); // Getter
+```
+
+
+5. Object Creation
+   ```java
+   public class Main {
+       public static void main(String[] args) {
+           // Using default constructor
+           Book book1 = new Book();
+           
+           // Using parameterized constructor
+           Book book2 = new Book("Java Programming");
+           
+           // Creating multiple objects
+           Calculator calc = new Calculator();
+       }
+   }
+   ```
+
+6. Member Access
+   ```java
+   public class Main {
+       public static void main(String[] args) {
+           Calculator calc = new Calculator();
+           
+           // Accessing methods
+           int sum = calc.add(5, 3);
+           calc.display("Result: " + sum);
+           
+           // Accessing public fields
+           Student student = new Student();
+           student.name = "John";    // OK if public
+           // student.id = 101;      // Error if private
+       }
+   }
+   ```
+
+Common Usage Pattern:
+```java
+// Define class
+public class Student {
+    // Fields
+    private String name;
+    private int age;
+
+    // Constructor
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Methods
+    public void study() {
+        System.out.println(name + " is studying");
+    }
+}
+
+// Use class
+public class Main {
     public static void main(String[] args) {
-        // Math methods
-        Math.sqrt(25);
-        Math.random();
+        // Create object
+        Student student = new Student("Alice", 20);
         
-        // String methods
-        "hello".length();
-        "hello".toUpperCase();
-        
-        // System methods
-        System.out.println();
-        System.currentTimeMillis();
+        // Access members
+        student.study();
     }
 }
 ```
-
-2. **User-defined Methods**
+## Types of Constructors
 ```java
-public class UserDefinedTypes {
-    // Instance Method
-    public void instanceMethod() {
-        // Requires object creation to call
+public class BankAccount {
+    private double balance;
+    private String accountHolder;
+
+    // Default constructor (automatically provided if no constructor is defined)
+    // Java creates: public BankAccount() { }
+
+    // No-argument constructor (explicitly written)
+    public BankAccount() {
+        balance = 0.0;
+        accountHolder = "";
     }
 
-    // Static Method
-    public static void staticMethod() {
-        // Can be called without object creation
+    // Explicit value constructor (parameterized constructor)
+    public BankAccount(double initialBalance, String holder) {
+        balance = initialBalance;
+        accountHolder = holder;
     }
-
-    // Abstract Method (in abstract class)
-    abstract void abstractMethod();
-
-    // Final Method (cannot be overridden)
-    final void finalMethod() {
-    }
-
-    // Synchronized Method (thread-safe)
-    synchronized void synchronizedMethod() {
-    }
-
-    // Native Method (implemented in another language)
-    native void nativeMethod();
 }
 ```
 
-3. **Method Types Based on Parameters**
+Key Points:
+1. **Default Constructor**
+   - Created by Java if no constructor is defined
+   - Invisible in code
+   - Initializes fields to default values (0, null, false)
+
+2. **No-argument Constructor**
+   - Explicitly written by programmer
+   - Takes no parameters
+   - Can set specific initial values
+
+3. **Explicit Value Constructor**
+   - Takes parameters
+   - Allows object creation with specific values
+   - Also called parameterized constructor
+
+Usage Example:
 ```java
-public class ParameterTypes {
-    // No-Parameter Method
-    void noParams() {
-    }
+// Using default constructor (if no other constructors exist)
+BankAccount acc1 = new BankAccount();
 
-    // Parameterized Method
-    void withParams(int x, String y) {
-    }
+// Using no-argument constructor
+BankAccount acc2 = new BankAccount();
 
-    // Variable Arguments Method
-    void varArgs(String... strings) {
-    }
-}
+// Using explicit value constructor
+BankAccount acc3 = new BankAccount(1000.0, "John Doe");
 ```
-
-4. **Method Types Based on Return**
-```java
-public class ReturnTypes {
-    // Void Method (no return)
-    void voidMethod() {
-    }
-
-    // Return Method
-    int returnMethod() {
-        return 42;
-    }
-
-    // Generic Return Method
-    <T> T genericMethod(T item) {
-        return item;
-    }
-}
-```
-
-5. **Access Modifier Methods**
-```java
-public class AccessTypes {
-    // Public Method
-    public void publicMethod() {
-    }
-
-    // Private Method
-    private void privateMethod() {
-    }
-
-    // Protected Method
-    protected void protectedMethod() {
-    }
-
-    // Default/Package-Private Method
-    void defaultMethod() {
-    }
-}
-```
-
-6. **Factory Methods**
-```java
-public class FactoryExample {
-    // Factory Method
-    public static FactoryExample createInstance() {
-        return new FactoryExample();
-    }
-}
-```
-
-7. **Accessor and Mutator Methods**
-```java
-public class AccessorMutator {
-    private String value;
-
-    // Getter (Accessor)
-    public String getValue() {
-        return value;
-    }
-
-    // Setter (Mutator)
-    public void setValue(String value) {
-        this.value = value;
-    }
-}
-```
-
-8. **Overridden Methods**
-```java
-public class OverrideExample {
-    // Overridden methods from Object class
-    @Override
-    public String toString() {
-        return "Custom toString";
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-}
-```
-
-9. **Interface Methods**
-```java
-interface InterfaceTypes {
-    // Abstract Method (pre-Java 8)
-    void abstractMethod();
-
-    // Default Method (Java 8+)
-    default void defaultMethod() {
-    }
-
-    // Static Method (Java 8+)
-    static void staticMethod() {
-    }
-
-    // Private Method (Java 9+)
-    private void privateMethod() {
-    }
-}
-```
-
-10. **Recursive Methods**
-```java
-public class RecursiveExample {
-    // Recursive Method
-    public int factorial(int n) {
-        if (n <= 1) return 1;
-        return n * factorial(n - 1);
-    }
-}
-```
-
-These different types of methods serve various purposes:
-- Code organization
-- Functionality encapsulation
-- Access control
-- Thread safety
-- Performance optimization
-- Object-oriented design patterns
-- API design
-- Code reusability
-
