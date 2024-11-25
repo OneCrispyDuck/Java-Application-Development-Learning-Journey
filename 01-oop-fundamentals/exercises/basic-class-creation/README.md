@@ -48,10 +48,10 @@ Book 1 equals Book 2: false
 ```
 
 ## Success Criteria
-- [ ] Book class implements all required attributes
-- [ ] Both constructors are implemented
-- [ ] All getter/setter methods work correctly
-- [ ] toString() and equals() methods are properly overridden
-- [ ] Main class demonstrates all functionality
-- [ ] Code follows Java naming conventions
+- [x] Book class implements all required attributes
+- [x] Both constructors are implemented
+- [x] All getter/setter methods work correctly
+- [x] toString() and equals() methods are properly overridden
+- [x] Main class demonstrates all functionality
+- [x] Code follows Java naming conventions
 ```
