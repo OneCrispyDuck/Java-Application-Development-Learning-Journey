@@ -1,29 +1,33 @@
-// Basic Association
+// Student.java
+package com.oop.association;
+
 public class Student {
+    // Private fields for encapsulation
+    private String studentId;
     private String name;
-    private Course course;  // One-to-One Association
-    
-    public Student(String name) {
+    private Course course;  // Association - Student has a Course
+
+    // Constructor
+    public Student(String studentId, String name) {
+        this.studentId = studentId;
         this.name = name;
     }
-    
+
+    // Method to enroll in a course
     public void enrollInCourse(Course course) {
-        this.course = course;  // Student can exist without a course
+        this.course = course;
+    }
+
+    // Getters and setters
+    public Course getCourse() {
+        return course;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public String getName() {
+        return name;
     }
 }
-
-public class Course {
-    private String courseId;
-    private String name;
-    
-    public Course(String courseId, String name) {
-        this.courseId = courseId;
-        this.name = name;
-    }
-    // Course can exist without students
-}
-
-// Usage
-Course math = new Course("MTH101", "Mathematics");
-Student john = new Student("John");
-john.enrollInCourse(math);  // Objects linked but independent

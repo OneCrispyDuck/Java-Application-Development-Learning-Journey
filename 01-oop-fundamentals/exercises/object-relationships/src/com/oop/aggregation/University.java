@@ -1,36 +1,34 @@
-// Aggregation Example
+// University.java
+package com.oop.aggregation;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class University {
     private String name;
-    private List<Department> departments;  // Departments can exist independently
-    
+    private List<Department> departments; // Aggregation - departments can exist independently
+
     public University(String name) {
         this.name = name;
         this.departments = new ArrayList<>();
     }
-    
-    public void addDepartment(Department dept) {
-        departments.add(dept);
+
+    // Method to add a department
+    public void addDepartment(Department department) {
+        departments.add(department);
     }
-    
-    public void removeDepartment(Department dept) {
-        departments.remove(dept);  // Department continues to exist
+
+    // Method to remove a department
+    public void removeDepartment(Department department) {
+        departments.remove(department);
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public List<Department> getDepartments() {
+        return new ArrayList<>(departments);
     }
 }
-
-public class Department {
-    private String name;
-    private String head;
-    
-    public Department(String name, String head) {
-        this.name = name;
-        this.head = head;
-    }
-    // Department can exist even if University is destroyed
-}
-
-// Usage
-Department cs = new Department("Computer Science", "Dr. Smith");
-Department math = new Department("Mathematics", "Dr. Jones");
-University university = new University("Tech U");
-university.addDepartment(cs);    // Departments can be shared
-university.addDepartment(math);  // or moved between universities
